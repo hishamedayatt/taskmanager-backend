@@ -15,9 +15,6 @@ import dotenv from 'dotenv'
 
 async function startServer() {
     const app = express();
-    app.use(cors({
-  origin: 'https://taskmanager-henna.vercel.app/', // ✅ replace with your actual frontend URL
-}));
 
     const apolloServer = new ApolloServer({ typeDefs, resolvers})
     await apolloServer.start();
@@ -32,9 +29,9 @@ async function startServer() {
     );
     dotenv.config();
 
-    app.use((req,res)=>{
-        res.send("server started......")
-    })
+    // app.use((req,res)=>{
+    //     res.send("server started......")
+    // })
     const PORT = process.env.PORT||5000;
     try {
         await mongoose.connect(process.env.mongo_db);
