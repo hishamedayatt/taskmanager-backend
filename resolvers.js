@@ -1,33 +1,5 @@
 import Task from "./models/Task.js"
 
-// const resolvers = {
-//   Query: {
-//     getTasks: async () => {
-//       return await Task.find();
-//     },
-//   },
-
-//   Mutation: {
-//     addTask: async (_, { title, description, status, due }) => {
-//       const newTask = new Task({ title, description, status, due });
-//       return await newTask.save();
-//     },
-
-//     deleteTask: async (_, { id }) => {
-//       return await Task.findByIdAndDelete(id);
-//     },
-
-//     updateTask: async (_, { id, title, description, status, due }) => {
-//       const updatedTask = await Task.findByIdAndUpdate(
-//         id,
-//         { title, description, status, due },
-//         { new: true }
-//       );
-//       return updatedTask;
-//     },
-//   },
-// };
-
 const resolvers = {
     Query:{
 

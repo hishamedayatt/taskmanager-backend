@@ -21,23 +21,4 @@ type Mutation{
     updateTask(id:ID,title:String,description:String,status:String,date:Date):Task
 }`
 
-// const typeDefs = gql`
-//   type Task {
-//     id: ID!
-//     title: String!
-//     description: String!
-//     status: String!
-//     due: String
-//   }
-
-//   type Query {
-//     getTasks: [Task]
-//   }
-
-//   type Mutation {
-//     addTask(title: String!, description: String!, status: String!, due: String): Task
-//     deleteTask(id: ID!): Task
-//     updateTask(id: ID!, title: String, description: String, status: String, due: String): Task
-//   }
-// `;
 export default typeDefs
