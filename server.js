@@ -15,6 +15,9 @@ import dotenv from 'dotenv'
 
 async function startServer() {
     const app = express();
+    app.use(cors({
+  origin: 'https://taskmanager-henna.vercel.app/', // ✅ replace with your actual frontend URL
+}));
 
     const apolloServer = new ApolloServer({ typeDefs, resolvers})
     await apolloServer.start();
