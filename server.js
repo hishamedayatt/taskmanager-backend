@@ -29,9 +29,9 @@ async function startServer() {
     );
     dotenv.config();
 
-    // app.use((req,res)=>{
-    //     res.send("server started......")
-    // })
+    app.use((req,res)=>{
+        res.send("server started......")
+    })
     const PORT = process.env.PORT||5000;
     try {
         await mongoose.connect(process.env.mongo_db);
