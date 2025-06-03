@@ -1,4 +1,5 @@
-
+import dotenv from 'dotenv'
+dotenv.config();
 
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
@@ -8,7 +9,7 @@ import cors from 'cors';
 import typeDefs from './typeDefs.js';
 import resolvers from './resolvers.js';
 import mongoose from 'mongoose';
-import dotenv from 'dotenv'
+
 
 
 
@@ -27,11 +28,10 @@ async function startServer() {
 
     app.use(
         '/graphql',
-        cors(),
         bodyParser.json(),
         expressMiddleware(apolloServer)
     );
-    dotenv.config();
+    
 
     // app.use((req,res)=>{
     //     res.send("server started......")
