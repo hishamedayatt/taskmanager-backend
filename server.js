@@ -16,7 +16,7 @@ import dotenv from 'dotenv'
 async function startServer() {
     const app = express();
     app.use(cors({
-    origin: 'https://taskmanager-hishamedayatts-projects.vercel.app/',
+    origin: 'https://taskmanager-hishamedayatts-projects.vercel.app',
     credentials: true
     }));
 
