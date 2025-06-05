@@ -7,10 +7,10 @@ const resolvers = {
             const tasks = await Task.find()
             return tasks
         },
-        getTasks: async(root,args)=>{
-            const task = await Task.findById(args.id)
-            return task
-        },
+        // getTasks: async(root,args)=>{
+        //     const task = await Task.findById(args.id)
+        //     return task
+        // },
     },
     Mutation:{
         addTask:async(root,args)=>{
